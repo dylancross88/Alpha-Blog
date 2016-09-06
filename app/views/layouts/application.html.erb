@@ -51,12 +51,17 @@
     </div>
   </nav>
 
+  <% flash.each do |name, msg| %>
+    <ul>
+      <li><%= msg %></li>
+    </ul>
+  <% end %>
+
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron">
     <div class="container">
       <h1>Welcome to Alpha Blog</h1>
       <p>My first Ruby on Rails Application</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
     </div>
   </div>
 
