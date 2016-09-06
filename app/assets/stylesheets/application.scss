@@ -14,3 +14,13 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.table {
+  thead {
+    tr {
+      th {
+        border-bottom: none;
+      }
+    }
+  }
+}
