@@ -24,6 +24,38 @@
   }
 }
 
+.article-actions {
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
+}
+
+.article-title {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.article-body {
+  border-top: 1px solid #eaeaea;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.article-footer {
+  border-top: 1px solid #eaeaea;
+
+  .article-actions {
+    border-top: none;
+  }
+  
+  .article-date {
+    text-align: right;
+  }
+}
+
+.description {
+  margin-top: 0;
+}
+
 footer {
   margin-top: 45px;
   padding-top: 5px;
