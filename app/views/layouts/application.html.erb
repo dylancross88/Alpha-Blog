@@ -16,15 +16,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render 'layouts/navbar' %>
-
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron">
-    <div class="container">
-      <h1>Welcome to Alpha Blog</h1>
-      <p>My first Ruby on Rails Application</p>
-    </div>
-  </div>
+  <%= render 'layouts/navigation' %>
 
   <div class="body-content">
     <div class="container">
@@ -32,5 +24,6 @@
       <%= yield %>
     </div>
   </div>
+  <%= render 'layouts/footer' %>
 </body>
 </html>
