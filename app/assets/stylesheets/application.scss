@@ -11,6 +11,7 @@
  * file per style scope.
  *
  */
+$navbar-default-bg: #111;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -51,7 +52,7 @@
   .article-actions {
     border-top: none;
   }
-  
+
   .article-date {
     text-align: right;
   }
