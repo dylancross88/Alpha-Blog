@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:edit, :update, :show, :destroy]
-  
+
   def index
     @articles = Article.all
   end
@@ -14,6 +14,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+    @article.user = User.first
     if @article.save
       flash[:success] = "Article was successfully created"
       redirect_to article_path(@article)
@@ -23,6 +24,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
+    @article.user = User.first
     if @article.update(article_params)
       flash[:success] = "Article was successfully updated"
       redirect_to article_path(@article)
