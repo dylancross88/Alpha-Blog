@@ -10,6 +10,7 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+    # Nothing to do here
   end
 
   def create
@@ -34,6 +35,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    # Nothing to do here
   end
 
   def destroy
