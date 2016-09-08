@@ -19,15 +19,25 @@
           </ul>
         </li>
       </ul>
-      <form class="navbar-form navbar-right">
-        <div class="form-group">
-          <input type="text" placeholder="Email" class="form-control">
-        </div>
-        <div class="form-group">
-          <input type="password" placeholder="Password" class="form-control">
-        </div>
-        <button type="submit" class="btn btn-success">Sign in</button>
-      </form>
+
+      <% if !session[:user_id] %>
+        <form class="navbar-form navbar-right">
+          <div class="form-group">
+            <input type="text" placeholder="Email" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Password" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-success">Sign in</button>
+        </form>
+      <% else %>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="logout">
+            <%= link_to "Logout", logout_path, method: :delete %>
+          </li>
+        </ul>
+      <% end %>
+
     </div><!--/.navbar-collapse -->
   </div>
 </nav>
