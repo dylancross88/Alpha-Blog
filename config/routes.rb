@@ -9,9 +9,10 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
 
   resources :articles
+  resources :users, except: [:new]
+  resources :categories, except: [:destroy]
 
   get 'signup', to: 'users#new'
-  resources :users, except: [:new]
 
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
