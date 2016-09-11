@@ -1,0 +1,28 @@
+<h1 align="center">Listing all Categories</h1>
+
+<div align="center">
+  <%= will_paginate %>
+</div>
+
+<div class="listing">
+  <div class="row">
+    <% @categories.each do |category| %>
+      <div class="well col-md-4 col-md-offset-4">
+        <div class="category-title text-center">
+          <%= link_to category.name, category_path(category) %>
+        </div>
+        <div class="text-center">
+          <% if logged_in? && current_user.admin? %>
+            <div class="category-footer">
+              <%= link_to "Delete Category", category_path(category), method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div align="center">
+  <%= will_paginate %>
+</div>
