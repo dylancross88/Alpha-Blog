@@ -4,6 +4,10 @@
   <%= will_paginate @category_articles %>
 </div>
 
+<div align="center">
+  <%= render 'admin_actions', obj: @category %>
+</div>
+
 <%= render 'articles/article', obj: @category.articles %>
 
 <div align="center">

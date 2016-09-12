@@ -1,0 +1,7 @@
+<% if logged_in? && current_user.admin? %>
+  <div class="row">
+    <%= link_to "Edit Category", edit_category_path(obj), class: "btn btn-primary" %>
+    <%= link_to "Delete Category", category_path(obj), method: :delete,
+        data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+  </div>
+<% end %>

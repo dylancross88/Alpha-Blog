@@ -14,13 +14,8 @@
         <div class="article-count">
           <small><%= pluralize(category.articles.count, "article") %></small>
         </div>
-        <div class="text-center">
-          <% if logged_in? && current_user.admin? %>
-            <div class="category-footer">
-              <%= link_to "Delete Category", category_path(category), method: :delete,
-                  data: { confirm: "Are you sure?" } %>
-            </div>
-          <% end %>
+        <div class="category-footer">
+          <%= render 'admin_actions', obj: category %>
         </div>
       </div>
     <% end %>
