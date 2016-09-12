@@ -25,6 +25,10 @@ $navbar-default-bg: #111;
   }
 }
 
+.input_checkbox {
+  width: auto !important;
+}
+
 .article-meta-details {
   border-top: 1px solid #eaeaea;
   margin-top: 15px;
@@ -68,6 +72,16 @@ $navbar-default-bg: #111;
 
   .user-title {
     @extend .article-title;
+  }
+}
+
+.badge {
+  background-color: #337AB7;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  a {
+    color: #FFF;
   }
 }
 

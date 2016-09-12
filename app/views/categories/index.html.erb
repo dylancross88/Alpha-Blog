@@ -11,6 +11,9 @@
         <div class="category-title text-center">
           <%= link_to category.name, category_path(category) %>
         </div>
+        <div class="article-count">
+          <small><%= pluralize(category.articles.count, "article") %></small>
+        </div>
         <div class="text-center">
           <% if logged_in? && current_user.admin? %>
             <div class="category-footer">

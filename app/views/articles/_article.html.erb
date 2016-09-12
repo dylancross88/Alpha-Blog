@@ -14,6 +14,9 @@
           </div>
         </div>
         <% if logged_in? && (current_user == article.user || current_user.admin? ) %>
+          <% if article.categories.any? %>
+            <p>Categories: <%= render article.categories %></p>
+          <% end %>
           <div class="article-footer">
             <div class="row">
               <div class="col-xs-8">

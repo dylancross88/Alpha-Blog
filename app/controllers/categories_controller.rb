@@ -21,6 +21,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    @category_articles = @category.articles.paginate(page: params[:page], per_page: 5)
   end
 
   def destroy
@@ -39,7 +40,7 @@ class CategoriesController < ApplicationController
     end
 
     def set_category
-      Category.find(params[:id])
+      @category = Category.find(params[:id])
     end
 
     def require_admin
